@@ -1,0 +1,30 @@
+{
+  "name": "flickity-fullscreen",
+  "description": "Enable fullscreen view of Flickity carousels",
+  "main": [
+    "fullscreen.js",
+    "fullscreen.css"
+  ],
+  "dependencies": {
+    "flickity": "^2.1.0",
+    "tap-listener": "^2.0.0"
+  },
+  "authors": [
+    "David DeSandro"
+  ],
+  "license": "GPL-3.0",
+  "keywords": [
+    "flickity",
+    "carousel",
+    "fullscreen"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "sandbox"
+  ]
+}
