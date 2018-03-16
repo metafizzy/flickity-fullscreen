@@ -42,14 +42,16 @@
       height: 240px;
       min-width: 100px;
       margin-right: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .carousel-image-cell img {
       display: block;
       max-height: 100%;
+      /* HACK vertically center */
+      /* could use flexbox, but doesn't work in Chrome & Safari */
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%)
     }
 
     .carousel.is-fullscreen .carousel-image-cell {
