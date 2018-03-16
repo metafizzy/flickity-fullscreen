@@ -36,6 +36,12 @@ html.is-flickity-fullscreen {
   border-radius: 4px;
 }
 
+/* right-to-left */
+.flickity-rtl .flickity-fullscreen-button {
+  right: auto;
+  left: 10px;
+}
+
 .flickity-fullscreen-button-exit { display: none; }
 
 .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit { display: block; }

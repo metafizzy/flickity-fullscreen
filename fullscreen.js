@@ -1,7 +1,13 @@
-// fullscreen
+/*!
+ * Flickity fullscreen v1.0.0
+ * Enable fullscreen view for Flickity
+ */
+
+/*jshint browser: true, undef: true, unused: true, strict: true*/
+
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */
+  /*jshint strict: false */ /*globals define, module, require */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
@@ -31,12 +37,11 @@ var proto = Flickity.prototype;
 
 
 proto._createFullscreen = function() {
-  // console.log(  this.options.fullscreen );
+  this.isFullscreen = false;
+
   if ( !this.options.fullscreen ) {
     return;
   }
-  // property
-  this.isFullscreen = false;
   // buttons
   this.viewFullscreenButton = new FullscreenButton( 'view', this );
   this.exitFullscreenButton = new FullscreenButton( 'exit', this );
@@ -145,8 +150,8 @@ function capitalize( text ) {
 var svgURI = 'http://www.w3.org/2000/svg';
 
 var pathDirections = {
-  view: 'M0,32V20H4v8h8v4Zm32,0V20H28v8H20v4ZM0,0V12H4V4h8V0ZM20,0V4h8v8h4V0Z',
-  exit: 'M20,12V0h4V8h8v4Zm-8,0V0H8V8H0v4Zm8,8V32h4V24h8V20ZM0,20v4H8v8h4V20Z',
+  view: 'M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z',
+  exit: 'M32,3l-7,7h5v4H18V2h4V7l7-7ZM3,32l7-7v5h4V18H2v4H7L0,29Z',
 };
 
 FullscreenButton.prototype.createIcon = function() {

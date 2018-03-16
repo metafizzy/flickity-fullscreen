@@ -4,10 +4,22 @@ _Enable fullscreen view for Flickity carousels_
 
 ## Install
 
-### Manual
+Add `fullscreen.css` to your stylesheets and `fullscreen.js` to your scripts.
 
-+ Add `fullscreen.js` to your scripts
-+ Add `fullscreen.css` to your stylesheets
+### Download
+
++ [fullscreen.css](https://unpkg.com/flickity-fullscreen@1/fullscreen.css)
++ [fullscreen.js](https://unpkg.com/flickity-fullscreen@1/fullscreen.js)
+
+### CDN
+
+``` html
+<link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+```
+
+``` html
+<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+```
 
 ### Package managers
 
