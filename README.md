@@ -27,7 +27,7 @@ npm: `npm install flickity-fullscreen`
 
 Bower: `bower install flickity-fullscreen`
 
-## Initialize
+## Usage
 
 Enable fullscreen behavior by setting `fullscreen: true` in Flickity options.
 
@@ -50,6 +50,26 @@ var flkty = $('.carousel').flickity({
 <div class="carousel" data-flickity='{ "fullscreen": true }'>
   ...
 </div>
+```
+
+### Webpack & Browserify
+
+``` js
+var Flickity = require('flickity-fullscreen');
+
+var flkty = new Flickity( '.carousel', {
+  fullscreen: true,
+});
+```
+
+### RequireJS
+
+``` js
+requirejs( [ 'path/to/flickity-fullscreen' ], function( Flickity ) {
+  var flkty = new Flickity( '.carousel', {
+    fullscreen: true,
+  });
+});
 ```
 
 ## Style
