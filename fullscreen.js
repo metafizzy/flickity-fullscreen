@@ -1,5 +1,5 @@
 /*!
- * Flickity fullscreen v1.0.0
+ * Flickity fullscreen v1.0.1
  * Enable fullscreen view for Flickity
  */
 
@@ -11,13 +11,13 @@
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
-      './flickity',
+      'flickity/js/index',
       'tap-listener/tap-listener',
     ], factory );
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('./flickity'),
+      require('flickity'),
       require('tap-listener')
     );
   } else {

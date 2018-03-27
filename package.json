@@ -1,6 +1,6 @@
 {
   "name": "flickity-fullscreen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enable fullscreen view of Flickity carousels",
   "main": "fullscreen.js",
   "style": "fullscreen.css",
