@@ -128,6 +128,23 @@ $carousel.flickity('toggleFullscreen');
 flkty.toggleFullscreen();
 ```
 
+## Events
+
+### fullscreenChange
+
+Triggered after entering or exiting the fullscreen view.
+
+``` js
+// jQuery
+$carousel.on( 'fullscreenChange.flickity', function( event, isFullscreen ) {...} );
+
+// vanilla JS
+flkty.on( 'fullscreenChange', function( event, isFullscreen ) {...} );
+```
+
+ - `event` · _Event_ · the `event` object
+ - `isFullscreen` · _Boolean_ · `true` if viewing fullscreen, `false` if exiting fullscreen
+
 ---
 
 By [Metafizzy](https://metafizzy.co) 🌈🐻

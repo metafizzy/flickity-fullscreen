@@ -83,6 +83,7 @@ proto._changeFullscreen = function( isView ) {
   if ( this.isFullscreen ) {
     this.reposition();
   }
+  this.dispatchEvent( 'fullscreenChange', null, [ isView ] );
 };
 
 proto.toggleFullscreen = function() {
