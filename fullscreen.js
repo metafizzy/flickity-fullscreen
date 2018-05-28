@@ -1,5 +1,5 @@
 /*!
- * Flickity fullscreen v1.0.1
+ * Flickity fullscreen v1.1.0
  * Enable fullscreen view for Flickity
  */
 
