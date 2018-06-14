@@ -139,10 +139,10 @@ Triggered after entering or exiting the fullscreen view.
 $carousel.on( 'fullscreenChange.flickity', function( event, isFullscreen ) {...} );
 
 // vanilla JS
-flkty.on( 'fullscreenChange', function( event, isFullscreen ) {...} );
+flkty.on( 'fullscreenChange', function( isFullscreen ) {...} );
 ```
 
- - `event` · _Event_ · the `event` object
+ - `event` · _Event_ · jQuery `event` object
  - `isFullscreen` · _Boolean_ · `true` if viewing fullscreen, `false` if exiting fullscreen
 
 ---
