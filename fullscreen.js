@@ -117,9 +117,11 @@ Flickity.keyboardHandlers[27] = function() {
 // ----- FullscreenButton ----- //
 
 function FullscreenButton( name, flickity ) {
+  var customPaths = this.getpathDirections(flickity.options.fullscreenPaths ? flickity.options.fullscreenPaths : {});
+
   this.name = name;
   this.createButton();
-  this.createIcon();
+  this.createIcon(customPaths);
   // events
   // trigger viewFullscreen or exitFullscreen on click
   this.onClick = function() {
@@ -144,12 +146,7 @@ function capitalize( text ) {
 
 var svgURI = 'http://www.w3.org/2000/svg';
 
-var pathDirections = {
-  view: 'M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z',
-  exit: 'M32,3l-7,7h5v4H18V2h4V7l7-7ZM3,32l7-7v5h4V18H2v4H7L0,29Z',
-};
-
-FullscreenButton.prototype.createIcon = function() {
+FullscreenButton.prototype.createIcon = function(pathDirections) {
   var svg = document.createElementNS( svgURI, 'svg');
   svg.setAttribute( 'class', 'flickity-button-icon' );
   svg.setAttribute( 'viewBox', '0 0 32 32' );
@@ -161,6 +158,14 @@ FullscreenButton.prototype.createIcon = function() {
   svg.appendChild( path );
   this.element.appendChild( svg );
 };
+
+FullscreenButton.prototype.getpathDirections = function( customPaths ){
+
+  return {
+    view: typeof customPaths.view == 'string' ? customPaths.view : 'M15,20,7,28h5v4H0V20H4v5l8-8Zm5-5,8-8v5h4V0H20V4h5l-8,8Z',
+    exit: typeof customPaths.exit == 'string' ? customPaths.exit : 'M32,3l-7,7h5v4H18V2h4V7l7-7ZM3,32l7-7v5h4V18H2v4H7L0,29Z',
+  };
+}
 
 FullscreenButton.prototype.activate = function() {
   this.element.addEventListener( 'click', this.clickHandler );
