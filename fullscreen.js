@@ -132,6 +132,8 @@ FullscreenButton.prototype.createButton = function() {
   var element = this.element = document.createElement('button');
   element.className = 'flickity-button flickity-fullscreen-button ' +
     'flickity-fullscreen-button-' + this.name;
+  // prevent button from submitting form
+  element.setAttribute( 'type', 'button' );
   // set label
   var label = capitalize( this.name + ' full-screen' );
   element.setAttribute( 'aria-label', label );
