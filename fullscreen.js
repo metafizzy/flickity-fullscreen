@@ -70,10 +70,17 @@ proto.exitFullscreen = function() {
   this._changeFullscreen( false );
 };
 
-proto._changeFullscreen = function( isView ) {
+proto._changeFullscreen = async function( isView ) {
   if ( this.isFullscreen == isView ) {
     return;
   }
+  // Force onto current slide and wait until it's there
+  // Done in order to avoid bugs when fullscreening during animation
+  this.select(this.selectedIndex, true, true);
+  while (this.isAnimating) {
+    await new Promise(r => setTimeout(r, 10));
+  }
+
   this.isFullscreen = isView;
   var classMethod = isView ? 'add' : 'remove';
   document.documentElement.classList[ classMethod ]('is-flickity-fullscreen');
@@ -83,6 +90,7 @@ proto._changeFullscreen = function( isView ) {
   if ( this.isFullscreen ) {
     this.reposition();
   }
+
   this.dispatchEvent( 'fullscreenChange', null, [ isView ] );
 };
 
