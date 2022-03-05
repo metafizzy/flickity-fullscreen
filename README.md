@@ -8,24 +8,24 @@ Add `fullscreen.css` to your stylesheets and `fullscreen.js` to your scripts.
 
 ### Download
 
-+ [fullscreen.css](https://unpkg.com/flickity-fullscreen@1/fullscreen.css)
-+ [fullscreen.js](https://unpkg.com/flickity-fullscreen@1/fullscreen.js)
++ [fullscreen.css](https://unpkg.com/flickity-fullscreen@2/fullscreen.css)
++ [fullscreen.js](https://unpkg.com/flickity-fullscreen@2/fullscreen.js)
 
 ### CDN
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+<link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css">
 ```
 
 ``` html
-<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+<script src="https://unpkg.com/flickity-fullscreen@2/fullscreen.js"></script>
 ```
 
 ### Package managers
 
 npm: `npm install flickity-fullscreen`
 
-Bower: `bower install flickity-fullscreen`
+Yarn: `yarn add flickity-fullscreen`
 
 ## Usage
 
@@ -52,23 +52,14 @@ var flkty = $('.carousel').flickity({
 </div>
 ```
 
-### Webpack & Browserify
+### Webpack
 
 ``` js
-var Flickity = require('flickity-fullscreen');
+const Flickkty = require('flickity');
+require('flickity-fullscreen');
 
 var flkty = new Flickity( '.carousel', {
   fullscreen: true,
-});
-```
-
-### RequireJS
-
-``` js
-requirejs( [ 'path/to/flickity-fullscreen' ], function( Flickity ) {
-  var flkty = new Flickity( '.carousel', {
-    fullscreen: true,
-  });
 });
 ```
 

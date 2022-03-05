@@ -1,14 +1,23 @@
 {
   "name": "flickity-fullscreen",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Enable fullscreen view of Flickity carousels",
   "main": "fullscreen.js",
   "style": "fullscreen.css",
-  "dependencies": {
-    "flickity": "^2.1.0"
+  "peerDependencies": {
+    "flickity": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-plugin-metafizzy": "^2.0.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard": "^24.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lintJs": "npx eslint .",
+    "lintCss": "npx stylelint '**/*.css'",
+    "lint": "npm run lintJs && npm run lintCss"
   },
   "keywords": [
     "flickity",
@@ -24,5 +33,24 @@
   "bugs": {
     "url": "https://github.com/metafizzy/flickity-fullscreen/issues"
   },
-  "homepage": "https://github.com/metafizzy/flickity-fullscreen#readme"
+  "homepage": "https://github.com/metafizzy/flickity-fullscreen#readme",
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "color-hex-case": "upper",
+      "comment-empty-line-before": null,
+      "declaration-block-no-duplicate-properties": [
+        true,
+        {
+          "ignore": [
+            "consecutive-duplicates-with-different-values"
+          ]
+        }
+      ],
+      "hue-degree-notation": "number",
+      "property-no-vendor-prefix": null,
+      "selector-class-pattern": null,
+      "string-quotes": "single"
+    }
+  }
 }
