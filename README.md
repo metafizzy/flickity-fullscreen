@@ -40,7 +40,8 @@ var $carousel = $('.carousel').flickity({
 
 ``` js
 // vanilla JS
-var flkty = $('.carousel').flickity({
+var el = document.querySelector('.carousel');
+var flkty = new Flickity(el, {
   fullscreen: true,
 });
 ```
