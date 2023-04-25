@@ -10,8 +10,8 @@
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-plugin-metafizzy": "^2.0.1",
-    "stylelint": "^14.2.0",
-    "stylelint-config-standard": "^24.0.0"
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0"
   },
   "scripts": {
     "test": "npm run lint",
