@@ -10,7 +10,7 @@
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-plugin-metafizzy": "^2.0.1",
-    "stylelint": "^14.2.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^24.0.0"
   },
   "scripts": {
